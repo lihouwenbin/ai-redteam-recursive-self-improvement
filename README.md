@@ -1,5 +1,7 @@
 # AI Red-Team Recursive Self-Improvement Framework
 
+Current release: `v0.1.0`
+
 This repository is a protocol-first framework for governing recursive
 self-improvement loops in AI-assisted projects.
 
