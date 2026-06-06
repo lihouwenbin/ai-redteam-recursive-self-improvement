@@ -1,0 +1,12 @@
+{
+  "decision": "promote",
+  "missing_evidence": [],
+  "preserved_failures": [
+    "Initial draft did not explain review responsibilities clearly."
+  ],
+  "reasons": [
+    "all required gates passed"
+  ],
+  "round_id": "RND_EXAMPLE_001",
+  "unresolved_vetoes": []
+}

@@ -1,0 +1,26 @@
+{
+  "round": {
+    "round_id": "RND_EXAMPLE_001",
+    "parent_round_id": null,
+    "objective": "Improve repository contribution workflow",
+    "hypothesis_family": "maintainability",
+    "frozen_task": "Add a contribution guide without changing protocol boundaries.",
+    "evidence": {
+      "tests_passed": true,
+      "diff_reviewed": true
+    },
+    "failures": [
+      "Initial draft did not explain review responsibilities clearly."
+    ],
+    "boundary_changes": [],
+    "human_approval_required": false,
+    "human_approval_recorded": false
+  },
+  "policy": {
+    "required_evidence": ["tests_passed", "diff_reviewed"],
+    "allow_promotion_with_failures": true,
+    "allow_unapproved_boundary_changes": false
+  },
+  "implementation_findings": [],
+  "research_findings": []
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lihouwenbin/ai-redteam-recursive-self-improvement/schemas/round_input.schema.json",
+  "title": "Recursive self-improvement round input",
+  "type": "object",
+  "required": ["round"],
+  "properties": {
+    "round": {
+      "type": "object",
+      "required": ["round_id", "objective", "hypothesis_family", "frozen_task"],
+      "properties": {
+        "round_id": { "type": "string", "minLength": 1 },
+        "parent_round_id": { "type": ["string", "null"] },
+        "objective": { "type": "string", "minLength": 1 },
+        "hypothesis_family": { "type": "string", "minLength": 1 },
+        "frozen_task": { "type": "string", "minLength": 1 },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "failures": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "boundary_changes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "human_approval_required": { "type": "boolean" },
+        "human_approval_recorded": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "required_evidence": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "allow_promotion_with_failures": { "type": "boolean" },
+        "allow_unapproved_boundary_changes": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "implementation_findings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/finding" }
+    },
+    "research_findings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/finding" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "required": ["source", "severity", "summary"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "severity": {
+          "type": "string",
+          "enum": ["info", "warning", "veto"]
+        },
+        "summary": { "type": "string", "minLength": 1 },
+        "resolved": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

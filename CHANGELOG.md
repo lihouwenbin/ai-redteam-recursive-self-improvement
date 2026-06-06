@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.1.1 - 2026-06-06
+
+### Added
+
+- `rsi-evaluate` command-line entrypoint for evaluating a round JSON file.
+- JSON round input schema.
+- JSON example round input.
+- CLI regression tests.
+
 ## v0.1.0 - 2026-06-06
 
 Initial public release of the domain-neutral AI red-team recursive

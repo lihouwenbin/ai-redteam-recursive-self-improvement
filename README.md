@@ -1,6 +1,6 @@
 # AI Red-Team Recursive Self-Improvement Framework
 
-Current release: `v0.1.0`
+Current release: `v0.1.1`
 
 This repository is a protocol-first framework for governing recursive
 self-improvement loops in AI-assisted projects.
@@ -58,6 +58,12 @@ Run tests:
 
 ```bash
 python -m pytest
+```
+
+Evaluate a JSON round file:
+
+```bash
+rsi-evaluate examples/minimal_round.json --out examples/minimal_decision_record.json
 ```
 
 Create and evaluate a minimal round:

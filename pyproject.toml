@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ai-redteam-recursive-self-improvement"
-version = "0.1.0"
+version = "0.1.1"
 description = "Domain-neutral AI red-team framework for recursive self-improvement governance"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -33,6 +33,9 @@ classifiers = [
 Homepage = "https://github.com/lihouwenbin/ai-redteam-recursive-self-improvement"
 Repository = "https://github.com/lihouwenbin/ai-redteam-recursive-self-improvement"
 Issues = "https://github.com/lihouwenbin/ai-redteam-recursive-self-improvement/issues"
+
+[project.scripts]
+rsi-evaluate = "rsi_framework.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["rsi_framework*"]
